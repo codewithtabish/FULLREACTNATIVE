@@ -2,7 +2,8 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Link } from 'expo-router';
 import { reactNativeTopics } from '../utils/data';
-import index from '../app/(days)/day2/index';
+
+
 
 const DayListItem = () => {
     const days = [...new Array(24)].map((item, index) => index + 1);
@@ -16,7 +17,8 @@ const DayListItem = () => {
         return (
             <Link style={styles.itemContainer}
             href={`/day${index+1}`}>
-                <Text style={{color:'orange',textAlign:"center"}}
+                <Text style={{color:'orange',textAlign:"center",
+                fontFamily:"outfit-bold"}}
                 >
                     {item}. Lorem ipsum dolor sit amet.
                 </Text>
@@ -26,10 +28,11 @@ const DayListItem = () => {
 
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container}
+        >
             <FlatList
                 data={reactNativeTopics}
-                renderItem={({ item, index }) => <CustomItem itemS={item} index={index} />}
+                renderItem={({ item, index }) => <CustomItem item={item} index={index} />}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.flatListContainer}
