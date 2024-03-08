@@ -16,7 +16,8 @@ const DayListItem = () => {
         return (
             <Link style={styles.itemContainer}
             href={`/day${index+1}`}>
-                <Text style={{color:'orange',textAlign:"center"}}>
+                <Text style={{color:'orange',textAlign:"center"}}
+                >
                     {item}. Lorem ipsum dolor sit amet.
                 </Text>
             </Link>
@@ -28,7 +29,7 @@ const DayListItem = () => {
         <View style={styles.container}>
             <FlatList
                 data={reactNativeTopics}
-                renderItem={({ item, index }) => <CustomItem item={item} index={index} />}
+                renderItem={({ item, index }) => <CustomItem itemS={item} index={index} />}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.flatListContainer}
