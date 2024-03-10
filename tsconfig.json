@@ -5,6 +5,11 @@
   },
   "include": [
     "app.d.ts"
-  ]
+  ],
+  "paths":{
+    "@/*":["src/*"],
+    "@/components/*":["src/components/*"],
+    "@assets/*":["assets/*"]
+  }
 
 }

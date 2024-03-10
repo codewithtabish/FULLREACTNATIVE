@@ -20,7 +20,7 @@ const DayListItem = () => {
                 <Text style={{color:'orange',textAlign:"center",
                 fontFamily:"outfit-bold"}}
                 >
-                    {item}. Lorem ipsum dolor sit amet.
+                    {item}. 
                 </Text>
             </Link>
         );

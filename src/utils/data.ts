@@ -1,9 +1,9 @@
 // import { *asMySplashScreen } from 'expo-splash-screen';
 export const reactNativeTopics:String[] = [
     "React Native Basics",
-    "Components and Props",
-    "State and Lifecycle",
-    "Handling Touches",
+    "React Native OnBoarding Screen",
+    "React Native Markdown Components",
+    "React Native Lottie Animation and files",
     "User Interface Styling",
     "Lists and FlatList",
     "Navigation in React Native",
