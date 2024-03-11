@@ -5,7 +5,7 @@ export const reactNativeTopics:String[] = [
     "React Native Markdown Components",
     "React Native Lottie Animation and files",
     "React Native Airbnb Map View",
-    "Lists and FlatList",
+    "Build the iOS Voice Memos app in React Native",
     "Navigation in React Native",
     "React Navigation Library",
     "Redux for State Management",
@@ -142,3 +142,6 @@ export const apartments = [
     numStars: 4.4,
   },
 ];
+
+
+
