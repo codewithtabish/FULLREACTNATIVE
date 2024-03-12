@@ -4,6 +4,7 @@ import { Audio } from 'expo-av';
 import { Ionicons } from '@expo/vector-icons'; // Import Ionicons or any other icon library you prefer
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
+import MemoItem from '../../../components/MemoItem';
 
 export default function App() {
   const [recording, setRecording] = useState();
@@ -11,6 +12,7 @@ export default function App() {
   const [memos, setMemos] = useState([]);
   const { height } = Dimensions.get('window');
   const AnimatedMaterialIcon = Animated.createAnimatedComponent(MaterialCommunityIcons);
+  const [sound, setSound] = useState()
 
   const iconSize = useSharedValue(40); // Initial size
 
@@ -68,6 +70,20 @@ export default function App() {
     };
   }, [recording]);
 
+  const playSound=async(uri)=>{
+    try {
+        const {sound}=await Audio.Sound.createAsync(
+            {uri},
+            {shouldPlay:true}
+            
+        );
+        setSound(sound)
+    } catch (error) {
+        console.log("The error while playing sound is ",error)
+        
+    }
+  }
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -77,14 +93,11 @@ export default function App() {
           paddingBottom: 120,
         }}
         data={memos}
-        renderItem={({ item, index }) => {
-          return (
-            <View key={index} className="m-2">
-              <Text className="text-justify align-super text-ellipsis">{item}</Text>
-            </View>
-          );
-        }}
-      />
+        renderItem={({item,index})=><MemoItem key={index} uri={item}
+        playSound={playSound}/>}
+        />
+    
+      
 
       <View
         className="absolute right-10 bottom-12"

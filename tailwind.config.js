@@ -4,8 +4,12 @@ content: [
   './app/**/*.{js,jsx,ts,tsx}',
   './components/**/*.{js,jsx,ts,tsx}',
   './src/app/components/**/*.{js,jsx,ts,tsx}',
+  './src/components/**/*.{js,jsx,ts,tsx}',
   './src/app/**/*.{js,jsx,ts,tsx}',
   './src/app/(days)/day1/**/*.{js,jsx,ts,tsx}',
+      './src/app/**/*.{js,jsx,ts,tsx}',
+    './src/components/**/*.{js,jsx,ts,tsx}',
+    './src/components/**/*.{js,jsx,ts,tsx}',
   './src/app/(days)/**/*.{js,jsx,ts,tsx}',
   './src/app/(tabs)/**/*.{js,jsx,ts,tsx}', // Include all files in the tabs directory
 ],
